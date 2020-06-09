@@ -6,15 +6,19 @@ import mutations from './mutations'
 Vue.use(Vuex)
 
 export default new Vuex.Store({
-  state: {
-    info: {
-      code: '',
-      enterprise: ''
+    state: {
+        info: {
+            code: '',
+            enterprise: ''
+        },
+        report: '',
+        param: {
+            name: '',
+            password: ''
+        }
     },
-    report: ''
-  },
-  mutations,
-  actions,
-  modules: {
-  }
+    mutations,
+    actions,
+    modules: {
+    }
 })
