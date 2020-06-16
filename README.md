@@ -17,3 +17,8 @@ npm run build
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+路由参数隐藏demo参照  
+```
+http://localhost:8080/wechat/#/demo-b
+```

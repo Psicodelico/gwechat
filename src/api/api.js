@@ -44,18 +44,15 @@ function httpRequest(method, url, params, headers, onUploadProgress) {
     })
 }
 
-export default {
-    ECLOUD_PREFIX: "",
-    get: function (url, params, headers) {
-        return httpRequest('GET', url, params, headers)
-    },
-    post: function (url, params, headers, onUploadProgress) {
-        return httpRequest('POST', url, params, headers, onUploadProgress)
-    },
-    put: function (url, params, headers) {
-        return httpRequest('PUT', url, params, headers)
-    },
-    delete: function (url, params, headers) {
-        return httpRequest('DELETE', url, params, headers)
-    }
-}
+export function Get(url, params, headers) {
+    return httpRequest('GET', url, params, headers)
+};
+export function Post(url, params, headers, onUploadProgress) {
+    return httpRequest('POST', url, params, headers, onUploadProgress)
+};
+export function Put(url, params, headers) {
+    return httpRequest('PUT', url, params, headers)
+};
+export function Delete(url, params, headers) {
+    return httpRequest('DELETE', url, params, headers)
+};
