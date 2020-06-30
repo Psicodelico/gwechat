@@ -16,7 +16,7 @@ const AUTH_PREFIX = "";
  */
 const URL = `${AUTH_PREFIX}api/pageBuild/SearchReport`;
 
-const getReport = (fn) => Get(URL, {});
+const getReport = (param) => Get(URL, param);
 
 export {
     getReport

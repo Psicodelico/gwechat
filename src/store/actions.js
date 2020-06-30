@@ -5,10 +5,14 @@ import {
 
 const actions = {
     async fetchReport({
-        commit
+        commit,
+        state
     }) {
         try {
-            let res = await getReport();
+            let res = await getReport({
+                frealtaskid: state.info.code,
+                fusername: state.info.enterprise
+            });
             commit(types.LOADING, false);
             commit(types.FETCH_REPORT, {
                 report: res.SearchResult
