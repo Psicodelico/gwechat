@@ -32,9 +32,15 @@ export default {
     },
     methods: {
         handleButtonClick(e) {
-            this.$store.dispatch("fetchReport").then(a => {
-                this.$router.push("/report");
-            });
+            if (!this.info.code) {
+                this.$toast("报告编号未填写");
+            } else if (!this.info.enterprise) {
+                this.$toast("委托单位名称未填写");
+            } else {
+                this.$store.dispatch("fetchReport").then(a => {
+                    this.$router.push("/report");
+                });
+            }
         }
     }
 };
