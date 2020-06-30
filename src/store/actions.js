@@ -14,6 +14,11 @@ const actions = {
                 fusername: state.info.enterprise
             });
             commit(types.LOADING, false);
+            /* {
+                “frealtaskid”: “A20200101”，
+                “fusername”: “XX有限公司”,
+                “fproductname”: “XX产品”
+            } */
             commit(types.FETCH_REPORT, {
                 report: res.SearchResult
             });
