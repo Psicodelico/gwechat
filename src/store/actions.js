@@ -20,12 +20,18 @@ const actions = {
                 “fproductname”: “XX产品”
             } */
             commit(types.FETCH_REPORT, {
-                report: res.SearchResult
+                report: {
+                    data: res.fproductname,
+                    error: res.SearchResult
+                }
             });
         } catch (e) {
             commit(types.LOADING, false);
             commit(types.FETCH_REPORT, {
-                report: "服务器异常，请稍后重试"
+                report: {
+                    data: "",
+                    error: "服务器异常，请稍后重试"
+                }
             });
         }
     },

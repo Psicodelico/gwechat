@@ -1,11 +1,12 @@
 <template>
     <div class="detail">
         <h3>报告内容</h3>
-        <div>
+        <div v-if="!!report.data">
             <span>报告编号:{{info.code}}</span>
             <span>委托单位名称:{{info.enterprise}}</span>
-            <pre>{{report}}</pre>
+            <span>产品名称:{{report.data}}</span>
         </div>
+        <div v-if="!report.data">{{report.error}}</div>
     </div>
 </template>
 <style lang="less" scoped>

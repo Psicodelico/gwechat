@@ -17,7 +17,10 @@ export default new Vuex.Store({
             code: '',
             enterprise: ''
         },
-        report: '',
+        report: {
+            data: "",
+            error: "服务器异常，请稍后重试"
+        },
         name: '',
         password: '',
         count: 0,
@@ -28,8 +31,7 @@ export default new Vuex.Store({
         ...mutations
     },
     actions,
-    modules: {
-    },
+    modules: {},
     plugins: [
         vuexLocal.plugin
     ],

@@ -28,10 +28,7 @@ export default {
         ...mapState(["info"])
     },
     data() {
-        return {
-            code: "",
-            enterprise: ""
-        };
+        return {};
     },
     methods: {
         handleButtonClick(e) {
