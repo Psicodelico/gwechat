@@ -2,9 +2,11 @@
 import {
 
     Get
-} from './api.js'
+} from './api.js';
 
-const AUTH_PREFIX = "";
+const protocol = (window && window.location && window.location.protocol) || "http:";
+
+const AUTH_PREFIX = `${protocol}//124.205.50.152:8080/`;
 
 /**
  * 查询接口
