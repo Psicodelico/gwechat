@@ -17,7 +17,7 @@ module.exports = {
         // 使用vue的服务器代理跨域
         proxy: {
             '/': {
-                target: 'https://ip:port', // 信息港
+                target: 'http://124.205.50.152:8080', // 信息港
                 changeOrigin: true,
             }
         }

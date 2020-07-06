@@ -4,9 +4,11 @@ import {
     Get
 } from './api.js';
 
-const protocol = (window && window.location && window.location.protocol) || "http:";
+const loc = window.location,
+    protocol = loc.protocal || 'http:',
+    hostname = loc.hostname || '124.205.50.152';
 
-const AUTH_PREFIX = `${protocol}//124.205.50.152:8080/`;
+const AUTH_PREFIX = `${protocol}//${hostname}:8080/`;
 
 /**
  * 查询接口
