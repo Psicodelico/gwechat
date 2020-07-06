@@ -5,7 +5,7 @@ import {
 } from './api.js';
 
 const loc = window.location,
-    protocol = loc.protocal || 'http:',
+    protocol = loc.protocol || 'http:',
     hostname = loc.hostname || '124.205.50.152';
 
 const AUTH_PREFIX = `${protocol}//${hostname}:8080/`;
