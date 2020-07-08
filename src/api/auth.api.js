@@ -9,7 +9,8 @@ const loc = window.location,
     hostname = loc.hostname || '124.205.50.152';
 
 // const AUTH_PREFIX = `${protocol}//${hostname}:8080/`;
-const AUTH_PREFIX = `http://124.205.50.152:8080/`;
+// const AUTH_PREFIX = `http://124.205.50.152:8080/`;
+const AUTH_PREFIX = ``;
 
 /**
  * 查询接口
